@@ -9,41 +9,41 @@ import { Section } from "../section";
 export function CaseStudySection({ className }: { className?: string }) {
   const caseStudies = [
     {
-      threadId: "7cfa5f8f-a2f8-47ad-acbd-da7137baf990",
-      title: "Forecast 2026 Agent Trends and Opportunities",
+      threadId: "cremap",
+      title: "CREMARKET SOCIAL",
       description:
-        "Create a webpage with a Deep Research report forecasting the agent technology trends and opportunities in 2026.",
+        "A Reddit-like social platform for commercial real estate professionals to share insights, ask questions, and discuss industry trends.",
     },
     {
       threadId: "4f3e55ee-f853-43db-bfb3-7d1a411f03cb",
-      title: 'Generate a Video Based On the Novel "Pride and Prejudice"',
+      title: 'CREMARKET MAP',
       description:
-        'Search the specific scene from the novel "Pride and Prejudice", then generate a video as well as a reference image based on the scenes.',
+        'A CRE map with video and UGC content showcasing the latest trends and innovations in the commercial real estate industry.',
     },
     {
       threadId: "21cfea46-34bd-4aa6-9e1f-3009452fbeb9",
-      title: "Doraemon Explains the MOE Architecture",
+      title: "@CREMARKET TIKTOK",
       description:
-        "Generate a Doraemon comic strip explaining the MOE architecture to the teenagers who are interested in AI.",
+        "A TikTok account for commercial real estate professionals to share insights, ask questions, and discuss industry trends.",
     },
     {
       threadId: "ad76c455-5bf9-4335-8517-fc03834ab828",
-      title: "An Exploratory Data Analysis of the Titanic Dataset",
+      title: "CREMARKET AR",
       description:
-        "Explore the Titanic dataset and identify the key factors that influenced survival rates with visualizations and insights.",
+        "CRE TikTok AR Effect Dealflow",
     },
     {
       threadId: "d3e5adaf-084c-4dd5-9d29-94f1d6bccd98",
-      title: "Watch Y Combinator's Video then Conduct a Deep Research",
+      title: "CREMARKET RENT (COMING SOON)",
       description:
-        "Watch the given Y Combinator's YouTube video and conduct a deep research on the YC's tips for technical startup founders.",
+        "CREMARKET Rent is a DIY Bitcoin dapp for tokenizing rent tokens.",
     },
     {
       threadId: "3823e443-4e2b-4679-b496-a9506eae462b",
-      title: "Collect and Summarize Dr. Fei Fei Li's Podcasts",
+      title: "CREMARKET AI (COMING SOON)",
       description:
-        "Collect all the podcast appearances of Dr. Fei Fei Li in the last 6 months, then summarize them into a comprehensive report.",
-    },
+        "CREMARKET AI underwriter",
+        },
   ];
   return (
     <Section

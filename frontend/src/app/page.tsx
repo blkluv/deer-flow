@@ -14,7 +14,6 @@ export default function LandingPage() {
       <main className="flex w-full flex-col">
         <Hero />
         <CaseStudySection />
-        <SkillsSection />
         <SandboxSection />
         <WhatsNewSection />
         <CommunitySection />

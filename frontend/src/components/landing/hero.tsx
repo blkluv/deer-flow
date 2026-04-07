@@ -28,7 +28,7 @@ export function Hero({ className }: { className?: string }) {
         />
       </div>
       <FlickeringGrid
-        className="absolute inset-0 z-0 translate-y-8 mask-[url(/images/deer.svg)] mask-size-[100vw] mask-center mask-no-repeat md:mask-size-[72vh]"
+        className="absolute inset-0 z-0 translate-y-8 mask-[url(/images/cre.svg)] mask-size-[100vw] mask-center mask-no-repeat md:mask-size-[72vh]"
         squareSize={4}
         gridGap={4}
         color={"white"}
@@ -39,38 +39,39 @@ export function Hero({ className }: { className?: string }) {
         <h1 className="flex items-center gap-2 text-4xl font-bold md:text-6xl">
           <WordRotate
             words={[
-              "Deep Research",
-              "Collect Data",
-              "Analyze Data",
-              "Generate Webpages",
-              "Vibe Coding",
-              "Generate Slides",
-              "Generate Images",
-              "Generate Podcasts",
-              "Generate Videos",
-              "Generate Songs",
-              "Organize Emails",
-              "Do Anything",
-              "Learn Anything",
+              "Market CRE",
+              "Find Deals",
+              "Analyze Properties",
+              "Manage Portfolios",
+              "Join Communities",
+              "Manage Properties",
+              "Vote on Amenities",
+              "Track Development",
+              "Verify Ownership",
+              "Learn Tokenization",
+              "Connect with Brokers",
+              "Underwrite Deals",
+              "Connect with Investors",
+              "Learn RWAs",
+              "Predict Market Trends",
+              "Tokenize Assets",
             ]}
           />{" "}
-          <div>with DeerFlow</div>
+          <div>with 🏢 CREMARKET.io</div>
         </h1>
         <p
           className="mt-8 scale-105 text-center text-2xl text-shadow-sm"
           style={{ color: "rgb(184,184,192)" }}
         >
-          An open-source SuperAgent harness that researches, codes, and creates.
-          With
+          A comprehensive modern platform for commercial real estate 
           <br />
-          the help of sandboxes, memories, tools, skills and subagents, it
-          handles
+          marketing and deal analysis to property management and community engagement.
           <br />
-          different levels of tasks that could take minutes to hours.
+          Learn what's happening in CRE with AI, tokenization, RWAs, and the future of the industry.
         </p>
-        <Link href="/workspace">
+        <Link href="https://social.cremarket.io" target="_blank">
           <Button className="size-lg mt-8 scale-108" size="lg">
-            <span className="text-md">Get Started with 2.0</span>
+            <span className="text-md">Join Our Social. Community</span>
             <ChevronRightIcon className="size-4" />
           </Button>
         </Link>
