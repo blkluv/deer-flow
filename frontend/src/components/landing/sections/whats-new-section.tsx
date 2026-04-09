@@ -1,3 +1,4 @@
+// WhatsNewSection.tsx (full updated file)
 "use client";
 
 import MagicBento, { type BentoCardProps } from "@/components/ui/magic-bento";
@@ -21,19 +22,14 @@ const getEffectLink = (label: string): string => {
   return links[label] || "#";
 };
 
-// Create description with clickable link wrapper
+// Simple description text (no anchor inside anymore)
 const createDescription = (label: string, text: string) => (
-  <a
-    href={getEffectLink(label)}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block group"
-  >
+  <>
     <p>{text}</p>
-    <span className="inline-flex items-center gap-1 mt-2 text-blue-400 group-hover:text-blue-300 group-hover:underline transition-colors">
+    <span className="inline-flex items-center gap-1 mt-2 text-blue-400">
       🎵 Try AR Effect →
     </span>
-  </a>
+  </>
 );
 
 const features: BentoCardProps[] = [
@@ -42,42 +38,49 @@ const features: BentoCardProps[] = [
     label: "🧭 Sourcing",
     title: "Where is it at?",
     description: createDescription("🧭 Sourcing", "The new CRE address system is powered by what3words.com. Keep it simple. Use #CREsourcing and tag @CREMARKET."),
+    href: getEffectLink("🧭 Sourcing"),
   },
   {
     color: COLOR,
     label: "🔎 Underwriting",
     title: "Is it a good deal?",
     description: createDescription("🔎 Underwriting", "Analyze numbers, video OM created replacing boring PDFs with engaging TikTok content. Use #CREunderwriting and tag @CREMARKET."),
+    href: getEffectLink("🔎 Underwriting"),
   },
   {
     color: COLOR,
     label: "💼 Offer",
     title: "I want in!",
     description: createDescription("💼 Offer", "Post the offer, share the video, and get feedback from the community to move the deal forward. Use #CREoffer and tag @CREMARKET."),
+    href: getEffectLink("💼 Offer"),
   },
   {
     color: COLOR,
     label: "🏛️ Capital",
     title: "Got funding?",
     description: createDescription("🏛️ Capital", "Celebrate the win, share the news, and attract more investors with TikTok content. Use #CREcapital and tag @CREMARKET."),
+    href: getEffectLink("🏛️ Capital"),
   },
   {
     color: COLOR,
     label: "🏗️ Build",
     title: "Construction & Development",
     description: createDescription("🏗️ Build", "Discuss development, construction, and value-add strategies with CRE builders, contractors, and service providers. Use #CREbuild and tag @CREMARKET."),
+    href: getEffectLink("🏗️ Build"),
   },
   {
     color: COLOR,
     label: "🔑 Key",
     title: "Lease & Operations",
     description: createDescription("🔑 Key", "Talk about lease signing, property management, and operations with CRE operators, property managers, and tenants. Use #CREcontrol and tag @CREMARKET."),
+    href: getEffectLink("🔑 Key"),
   },
   {
     color: COLOR,
     label: "📈 Story",
     title: "Share the Journey",
     description: createDescription("📈 Story", "What happened? Share the story behind the deal, the lessons learned, and the journey. Use #CREstory and tag @CREMARKET."),
+    href: getEffectLink("📈 Story"),
   },
 ];
 
