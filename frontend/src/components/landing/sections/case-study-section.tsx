@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import { Card } from "@/components/ui/card";
-import { pathOfThread } from "@/core/threads/utils";
 import { cn } from "@/lib/utils";
 
 import { Section } from "../section";
@@ -9,42 +8,47 @@ import { Section } from "../section";
 export function CaseStudySection({ className }: { className?: string }) {
   const caseStudies = [
     {
-      threadId: "cremap",
       title: "CREMARKET SOCIAL",
       description:
         "A Reddit-like social platform for commercial real estate professionals to share insights, ask questions, and discuss industry trends.",
+      url: "https://social.cremarket.io",
+      comingSoon: false,
     },
     {
-      threadId: "4f3e55ee-f853-43db-bfb3-7d1a411f03cb",
-      title: 'CREMARKET MAP',
+      title: "CREMARKET MAP",
       description:
-        'A CRE map with video and UGC content showcasing the latest trends and innovations in the commercial real estate industry.',
+        "A CRE map with video and UGC content showcasing the latest trends and innovations in the commercial real estate industry.",
+      url: "https://map.cremarket.io",
+      comingSoon: false,
     },
     {
-      threadId: "21cfea46-34bd-4aa6-9e1f-3009452fbeb9",
       title: "@CREMARKET TIKTOK",
       description:
         "A TikTok account for commercial real estate professionals to share insights, ask questions, and discuss industry trends.",
+      url: "https://tiktok.com/@cremarket",
+      comingSoon: false,
     },
     {
-      threadId: "ad76c455-5bf9-4335-8517-fc03834ab828",
       title: "CREMARKET AR",
-      description:
-        "CRE TikTok AR Effect Dealflow",
+      description: "CRE TikTok AR Effect Dealflow",
+      url: "https://ar.cremarket.io",
+      comingSoon: false,
     },
     {
-      threadId: "d3e5adaf-084c-4dd5-9d29-94f1d6bccd98",
       title: "CREMARKET RENT (COMING SOON)",
       description:
         "CREMARKET Rent is a DIY Bitcoin dapp for tokenizing rent tokens.",
+      url: "#",
+      comingSoon: true,
     },
     {
-      threadId: "3823e443-4e2b-4679-b496-a9506eae462b",
       title: "CREMARKET AI (COMING SOON)",
-      description:
-        "CREMARKET AI underwriter",
-        },
+      description: "CREMARKET AI underwriter",
+      url: "#",
+      comingSoon: true,
+    },
   ];
+
   return (
     <Section
       className={className}
@@ -52,25 +56,25 @@ export function CaseStudySection({ className }: { className?: string }) {
       subtitle="We re-built the CRE industry markets by subdomains."
     >
       <div className="container-md mt-8 grid grid-cols-1 gap-4 px-20 md:grid-cols-2 lg:grid-cols-3">
-        {caseStudies.map((caseStudy) => (
-          <Link
-            key={caseStudy.title}
-            href={pathOfThread(caseStudy.threadId) + "?mock=true"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Card className="group/card relative h-64 overflow-hidden">
+        {caseStudies.map((caseStudy) => {
+          const cardContent = (
+            <Card
+              className={cn(
+                "group/card relative h-64 overflow-hidden",
+                caseStudy.comingSoon && "opacity-75 cursor-not-allowed"
+              )}
+            >
               <div
                 className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-300 group-hover/card:scale-110 group-hover/card:brightness-90"
                 style={{
-                  backgroundImage: `url(/images/${caseStudy.threadId}.jpg)`,
+                  backgroundImage: `url(/images/placeholder.jpg)`, // use a default placeholder image
                 }}
               ></div>
               <div
                 className={cn(
                   "flex h-full w-full translate-y-[calc(100%-60px)] flex-col items-center",
                   "transition-all duration-300",
-                  "group-hover/card:translate-y-[calc(100%-128px)]",
+                  "group-hover/card:translate-y-[calc(100%-128px)]"
                 )}
               >
                 <div
@@ -91,8 +95,23 @@ export function CaseStudySection({ className }: { className?: string }) {
                 </div>
               </div>
             </Card>
-          </Link>
-        ))}
+          );
+
+          if (caseStudy.comingSoon) {
+            return <div key={caseStudy.title}>{cardContent}</div>;
+          }
+
+          return (
+            <Link
+              key={caseStudy.title}
+              href={caseStudy.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {cardContent}
+            </Link>
+          );
+        })}
       </div>
     </Section>
   );

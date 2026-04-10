@@ -69,10 +69,8 @@ export function SandboxSection({ className }: { className?: string }) {
 
             <AnimatedSpan delay={6400} className="text-blue-500">
               ✔ Lead qualified (7 questions completed)<br />
-              ✔ Property type + location matched to specialist broker<br />
-              ✔ Lead logged as structured JSON → broker assigned<br />
-              ✔ Broker notified via daily digest (9 AM local)<br />
-              ✔ Live feed updated on social.cremarket.io/leads
+              ✔ Property type + location matched to nearest broker<br />
+              ✔ Live feed updated on social.cremarket.io/deal
             </AnimatedSpan>
           </Terminal>
         </div>

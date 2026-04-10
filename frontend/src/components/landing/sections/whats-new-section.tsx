@@ -89,7 +89,7 @@ export function WhatsNewSection({ className }: { className?: string }) {
     <Section
       className={cn("", className)}
       title="CRE TikTok AR Effect Deal Flow"
-      subtitle="The complete deal pipeline — from sourcing to story — powered by TikTok AR effects and community collaboration."
+      subtitle="The complete deal pipeline from sourcing to story powered by TikTok AR effects. Click on the deal stage to open the TikTok effect and start creating your own content to share with the CRE community."
     >
       <div className="flex w-full items-center justify-center">
         <MagicBento data={features} />
