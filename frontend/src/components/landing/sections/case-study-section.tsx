@@ -10,6 +10,7 @@ export function CaseStudySection({ className }: { className?: string }) {
       description:
         "A Reddit-like social platform for commercial real estate professionals to share insights, ask questions, and discuss industry trends.",
       url: "https://social.cremarket.io",
+      imageId: "cremap", // original threadId for SOCIAL
       comingSoon: false,
     },
     {
@@ -17,6 +18,7 @@ export function CaseStudySection({ className }: { className?: string }) {
       description:
         "A CRE map with video and UGC content showcasing the latest trends and innovations in the commercial real estate industry.",
       url: "https://map.cremarket.io",
+      imageId: "4f3e55ee-f853-43db-bfb3-7d1a411f03cb",
       comingSoon: false,
     },
     {
@@ -24,12 +26,14 @@ export function CaseStudySection({ className }: { className?: string }) {
       description:
         "A TikTok account for commercial real estate professionals to share insights, ask questions, and discuss industry trends.",
       url: "https://tiktok.com/@cremarket",
+      imageId: "21cfea46-34bd-4aa6-9e1f-3009452fbeb9",
       comingSoon: false,
     },
     {
       title: "CREMARKET AR",
       description: "CRE TikTok AR Effect Dealflow",
       url: "https://ar.cremarket.io",
+      imageId: "ad76c455-5bf9-4335-8517-fc03834ab828",
       comingSoon: false,
     },
     {
@@ -37,12 +41,14 @@ export function CaseStudySection({ className }: { className?: string }) {
       description:
         "CREMARKET Rent is a DIY Bitcoin dapp for tokenizing rent tokens.",
       url: "#",
+      imageId: "d3e5adaf-084c-4dd5-9d29-94f1d6bccd98",
       comingSoon: true,
     },
     {
       title: "CREMARKET AI (COMING SOON)",
       description: "CREMARKET AI underwriter",
       url: "#",
+      imageId: "3823e443-4e2b-4679-b496-a9506eae462b",
       comingSoon: true,
     },
   ];
@@ -65,7 +71,7 @@ export function CaseStudySection({ className }: { className?: string }) {
               <div
                 className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-300 group-hover/card:scale-110 group-hover/card:brightness-90"
                 style={{
-                  backgroundImage: `url(/images/placeholder.jpg)`,
+                  backgroundImage: `url(/images/${caseStudy.imageId}.jpg)`,
                 }}
               ></div>
               <div
@@ -86,7 +92,7 @@ export function CaseStudySection({ className }: { className?: string }) {
                     <h3 className="flex h-14 items-center text-xl font-bold text-shadow-black">
                       {caseStudy.title}
                     </h3>
-                    <p className="box-shadow-black overflow-hidden text-sm text-white/85 text-shadow-black">
+                    <p className="box-shadow-black overflow-hidden text-sm text-white/85 text-shadow-black break-words">
                       {caseStudy.description}
                     </p>
                   </div>
@@ -99,7 +105,6 @@ export function CaseStudySection({ className }: { className?: string }) {
             return <div key={caseStudy.title}>{cardContent}</div>;
           }
 
-          // Use regular <a> tag to guarantee external navigation
           return (
             <a
               key={caseStudy.title}
