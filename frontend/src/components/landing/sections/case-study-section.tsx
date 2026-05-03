@@ -30,9 +30,9 @@ export function CaseStudySection({ className }: { className?: string }) {
       comingSoon: false,
     },
     {
-      title: "CREMARKET AR",
-      description: "CRE TikTok AR Effect Dealflow",
-      url: "https://ar.cremarket.io",
+      title: "RNTBNB",
+      description: "The blockchain Airbnb with no middleman and zero fees.",
+      url: "https://rntbnb.com",
       imageId: "ad76c455-5bf9-4335-8517-fc03834ab828",
       comingSoon: false,
     },
